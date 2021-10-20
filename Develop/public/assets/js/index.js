@@ -33,6 +33,14 @@ const getNotes = () =>
     },
   });
 
+  // const getNotes = () =>
+  // fetch('../../../db/db.json', {
+  //   method: 'GET',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  // });
+
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
