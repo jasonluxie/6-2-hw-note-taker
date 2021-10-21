@@ -17,7 +17,6 @@ app.post("/notes", (req, res) => {
             text,
             id: uniqid(),
         };
-        // const stringNote = JSON.stringify(newNote);
         fs.readFile("./db/db.json", "utf8", (err, data) => {
             if (err) {console.error(err)};
             const noteData = JSON.parse(data);
