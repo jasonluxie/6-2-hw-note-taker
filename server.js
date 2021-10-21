@@ -3,10 +3,6 @@ const path = require("path");
 
 const api = require('./routes/routes.js')
 
-const uniqid = require("uniqid");
-const newid = uniqid();
-// console.log(newid)
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 
