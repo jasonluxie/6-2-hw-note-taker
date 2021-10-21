@@ -6,7 +6,8 @@ const uniqid = require("uniqid");
 const notesDB = require("../db/db.json");
 
 app.get("/notes", (req, res) => {
-    res.json(notesDB);
+    res.status(200).send(notesDB);
+    console.info(`${req.method} request recieved`)
 });
 
 app.post("/notes", (req, res) => {
