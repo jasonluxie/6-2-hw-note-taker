@@ -43,14 +43,12 @@ app.post("/notes", (req, res) => {
 
 // Need to add req/res somewhere
 app.delete(`/notes/:id`, (req, res) => {
-    console.log(req.params)
     fs.readFile("./db/db.json", "utf8", (err, data) => {
         if (err) {
             console.error(err);
         }
         const noteData = JSON.parse(data);
-        const newNoteData = noteData.filter((e) => e.id != req.params.id);
-        console.log(newNoteData);
+        const newNoteData = noteData.filter((e) => e.id != req.params.id);;
         fs.writeFile(
             "./db/db.json",
             JSON.stringify(newNoteData, null, 4),
